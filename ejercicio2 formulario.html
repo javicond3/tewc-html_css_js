@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head lang=en>
+  <meta charset="UTF8">
+  <link rel="icon" href="http://www2.caminos.upm.es/Departamentos/matematicas/WEBGIE/images/escupm.gif">
+  <title>Formulario</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form action="procesa.php" method="get">
+      <fieldset>
+        <legend>Datos personales</legend>
+     
+        <p><label>Nombre(*)
+          <input type="text" name="name" placeholder="Introduzca su nombre" required></label></p>
+        <p><label>Apellidos(*)
+          <input type="text" name="name" placeholder="Introduzca sus apellidos" required></label></p>
+        <p><label>Teléfono
+          <input type="text" name="name" placeholder="Introduzca su teléfono "></label></p>
+        <p><label>Correo electrónico(*)
+          <input type="text" name="name" placeholder="Introduzca su correo" required></label></p>
+        <fieldset>
+          <legend>Selecciona Género</legend>
+          <p><label>Hombre <input type="radio" name="genre" value="male"></label> 
+             <label>Mujer <input type="radio" name="genre" value="female"></label></p>
+        </fieldset>
+        <p><label>Color
+          <input type="color" name="color" id="color">
+        </label></p>
+        <div>
+          <h3>Resumen del CV(*)</h3>
+          <textarea name="textarea" cols="80" rows="4" placeholder="Breve resumen del CV" required></textarea>
+        </div>
+         <p><label>Ficheros adjuntos con el CV
+          <input type="file" name="file" value="Elegir archivos" multiple>
+        </label></p>
+        <fieldset>
+          <legend>Dirección</legend>
+          <p><label>Calle
+          <input type="text" name="street" placeholder="Calle" maxlength="10" minlength="2"></label></p>
+          <p><label>Número
+          <input type="text" name="number" placeholder="Número" min="0" max="1000"></label></p>
+          <p><label>Código postal
+          <input type="range" name="CP" min="10000" max="70000" step="1" ></label></p>
+          <p><label>Provincia
+            <select name="country">
+              <option value="Madrid">Madrid</option>
+              <option value="Ournese">Ourense</option>
+              <option value="Sevilla">Sevilla</option>
+            </select>
+          </label></p>
+          <p><label>País
+          <input type="text" name="country" placeholder="Teclea para completar País" list="paises" >
+          <datalist id="paises">
+            <option value="España">
+            <option value="Italia">
+            <option value="Francia">
+          </datalist></label></p>
+          <div>
+            <label>Interesado en puestos <input type="checkbox" name="puesto" value="completo"> Tiempo completo</label>
+            <label><input type="checkbox" name="puesto" value="parcial">Tiempo parcial</label>
+          </div>
+        </fieldset>
+        <p><input type="submit" value="Enviar"><input type="reset" value="Restablecer"></p>
+      </fieldset>
+    </form>
+  </body>
+</html>
